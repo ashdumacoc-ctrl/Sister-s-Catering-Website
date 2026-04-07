@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sister's Catering - Elegant Catering Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION BAR
+         ============================================ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/logo.jpg" alt="Sister's Catering Logo" class="nav-logo">
+                <span>Sister's Catering</span>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link" onclick="openLoginModal(event)">Login</a></li>
+                <li><a href="#" class="nav-link" onclick="openAdminPanel(event)">Admin</a></li>
+                <li><a href="#" class="nav-link" onclick="openInquiryModal(event)">Order</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HOME SECTION (HERO SECTION)
+         ============================================ -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">CATERING SERVICES FOR EVERY CELEBRATION</h1>
+            <p class="hero-subtitle">Bringing Filipino taste to your special events</p>
+            <button class="cta-button" onclick="openInquiryModal(event)">Order Now</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Welcome Message -->
+    <section class="welcome">
+        <div class="container">
+            <h2>Welcome to Sister's Catering</h2>
+            <p>At Sister's Catering, we believe that every celebration deserves exceptional food and gracious service. With over 20 years of experience in Filipino and fusion cuisine, we create memorable dining experiences that bring people together. Our mission is to make your special moments even more special with delicious, freshly prepared dishes served with warmth and professionalism.</p>
+        </div>
+    </section>
+
+    <!-- Promo Video Section -->
+    <section id="promo" class="promo-section">
+        <div class="promo-container container">
+            <div class="promo-video-wrap">
+                <video autoplay muted loop playsinline poster="assets/video-poster.jpg">
+                    <source src="assets/promo.vid1.mp4" type="video/mp4">
+                    <source src="assets/promo" type="video/webm">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="promo-overlay">
+                    <span>Featured Spotlight</span>
+                    <p>Enjoy a quick showcase of Sister's Catering service, menu highlights, and event presentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION (HIDDEN ON MAIN PAGE)
+         ============================================ -->
+    <section id="about" class="about hidden">
+        <div class="container">
+            <h2>About Sister's Catering</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Sister's Catering was founded by five girls who shared a passion for Filipino cuisine and hospitality. What started as small family gatherings has grown into a full-service catering business serving hundreds of satisfied clients each year.</p>
+                    <p>We specialize in Filipino dishes prepared with modern techniques, complemented by international fusion options to suit diverse palates and preferences.</p>
+                </div>
+                <div class="about-info">
+                    <h3>Why Choose Us?</h3>
+                    <ul class="about-list">
+                        <li><strong>Experience:</strong> Over two decades in catering excellence</li>
+                        <li><strong>Quality:</strong> Premium ingredients and expert preparation</li>
+                        <li><strong>Customization:</strong> Tailored menus for your specific needs</li>
+                        <li><strong>Reliability:</strong> Professional service, on-time delivery</li>
+                        <li><strong>Warmth:</strong> Personal attention to every detail</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="about-modal login-modal" id="aboutModal" aria-hidden="true" role="dialog" aria-labelledby="aboutModalTitle">
+        <div class="modal-content about-modal-content">
+            <button class="modal-close" id="closeAboutModal" aria-label="Close About modal">&times;</button>
+            <h2 id="aboutModalTitle">About Sister's Catering</h2>
+            <div class="about-modal-body">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Sister's Catering was founded by five girls who shared a passion for Filipino cuisine and hospitality. What started as small family gatherings has grown into a full-service catering business serving hundreds of satisfied clients each year.</p>
+                    <p>We specialize in Filipino dishes prepared with modern techniques, complemented by international fusion options to suit diverse palates and preferences.</p>
+                </div>
+                <div class="about-info">
+                    <h3>Why Choose Us?</h3>
+                    <ul class="about-list">
+                        <li><strong>Experience:</strong> Over two decades in catering excellence</li>
+                        <li><strong>Quality:</strong> Premium ingredients and expert preparation</li>
+                        <li><strong>Customization:</strong> Tailored menus for your specific needs</li>
+                        <li><strong>Reliability:</strong> Professional service, on-time delivery</li>
+                        <li><strong>Warmth:</strong> Personal attention to every detail</li>
+                    </ul>
+                </div>
+                <div class="about-values">
+                    <div class="value-card">
+                        <h3>Our Vision</h3>
+                        <p>To be the preferred catering service for celebrations across the region, known for exceptional quality and personalized service.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Our Mission</h3>
+                        <p>To create memorable dining experiences by delivering authentic Filipino cuisine with warm hospitality, tailored to every event.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Our Commitment</h3>
+                        <p>We are committed to providing the highest quality ingredients, innovative food preparation, and exceptional customer service for every event.</p>
+                    </div>
+                </div>
+                <div class="about-team">
+                    <h3>Meet Our Team</h3>
+                    <div class="team-grid modal-team-grid">
+                        <div class="team-member">
+                            <img src="assets/Team-member-1.png" alt="Janah Abonitalla" class="member-photo">
+                            <h3>Janah Abonitalla</h3>
+                            <p class="member-role">Main Programmer & Web Designer</p>
+                            <p class="member-description">Janah is in charge of the technical aspects of our website and ensures our visual identity remains strong.</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="assets/Team-member-2.jpg" alt="Cristine Warque" class="member-photo">
+                            <h3>Cristine Warque</h3>
+                            <p class="member-role">Web Designer</p>
+                            <p class="member-description">Cristine ensures the visual appeal and user experience of our website stays modern and engaging.</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="assets/Team-member-3.jpg" alt="Ashera Duma" class="member-photo">
+                            <h3>Ashera Duma</h3>
+                            <p class="member-role">Web Designer</p>
+                            <p class="member-description">Ashera is responsible for creating engaging and user-friendly designs that make browsing effortless.</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="assets/Team-member-4.jpeg" alt="Faye Flores" class="member-photo">
+                            <h3>Faye Flores</h3>
+                            <p class="member-role">Web Designer</p>
+                            <p class="member-description">Faye ensures our website's design is both aesthetically pleasing and functionally effective.</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="assets/Team-member-5.jpg" alt="Crystal Ontolans" class="member-photo">
+                            <h3>Crystal Ontolan</h3>
+                            <p class="member-role">Web Designer</p>
+                            <p class="member-description">Crystal brings our visual concepts to life with her creative design skills and attention to detail.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SERVICES SECTION
+         ============================================ -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card" onclick="openPackagesModal(event)">
+                    <div class="service-icon">📦</div>
+                    <h3>Catering Packages</h3>
+                    <p>Explore our diverse catering packages designed to suit any budget and guest count, from intimate gatherings to large corporate events.</p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card" onclick="openInquiryModal(event)">
+                    <div class="service-icon">📋</div>
+                    <h3>Online Inquiries & Reservations</h3>
+                    <p>Easily inquire about our services and make reservations through our website. Our team responds promptly to all inquiries.</p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card" onclick="openMenuModal(event)">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Menu Preview</h3>
+                    <p>Browse our extensive menu with descriptions and pricing. Mix and match dishes to create your perfect catering experience.</p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card" onclick="openEventsModal(event)">
+                    <div class="service-icon">🎉</div>
+                    <h3>Event Catering</h3>
+                    <p>Specialized catering for weddings, birthdays, corporate events, anniversaries, and any celebration you have in mind.</p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card" onclick="openSupportModal(event)">
+                    <div class="service-icon">💬</div>
+                    <h3>Customer Support</h3>
+                    <p>Dedicated customer support team available to answer questions, provide recommendations, and ensure your event is perfect.</p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card" onclick="openDeliveryModal(event)">
+                    <div class="service-icon">🚚</div>
+                    <h3>Delivery & Setup</h3>
+                    <p>Delivery and setup services ensure your catering arrives fresh and beautifully presented at your venue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <strong>EMAIL:</strong>
+                        <a href="mailto:info@sisterscatering.com">info@sisterscatering.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>PHONE:</strong>
+                        <a href="tel:+63917-555-1234">(+63) 965-799-5016</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>ADDRESS:</strong>
+                        <p>Hillside Balongis, CDO , Philippines</p>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" class="social-link" title="Facebook">f</a>
+                        <a href="https://www.instagram.com/?hl=en" class="social-link" title="Instagram">📷</a>
+                        <a href="https://twitter.com/" class="social-link" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         LOGIN MODAL
+         ============================================ -->
+    <div class="login-modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeLoginModal">&times;</button>
+            
+            <div class="login-card">
+                <div class="login-header">
+                    <h2>Welcome Back</h2>
+                    <p>Login to your Sister's Catering account</p>
+                </div>
+
+                <form class="login-form" id="loginForm">
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+
+                    <!-- Remember Me Checkbox -->
+                    <div class="form-group checkbox">
+                        <input 
+                            type="checkbox" 
+                            id="remember" 
+                            name="remember"
+                        >
+                        <label for="remember">Remember me</label>
+                    </div>
+
+                    <!-- Error Message (hidden by default) -->
+                    <div class="form-error" id="formError"></div>
+
+                    <!-- Login Button -->
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+
+                <!-- Forgot Password Link -->
+                <div class="login-footer">
+                    <p><a href="#" class="forgot-password">Forgot your password?</a></p>
+                </div>
+
+                <!-- Sign Up Link -->
+                <div class="signup-section">
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PACKAGES MODAL
+         ============================================ -->
+    <div class="packages-modal" id="packagesModal">
+        <div class="packages-modal-content">
+            <button class="modal-close" id="closePackagesModal">&times;</button>
+            
+            <h2>Our Catering Packages</h2>
+            
+            <div class="packages-grid">
+                <!-- Package A -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>PACKAGE A</h3>
+                        <div class="package-price"> ₱4,999</div>
+                    </div>
+                    <div class="package-capacity">
+                        <strong>For 5-10 Persons</strong>
+                        <p>Perfect for small gatherings and intimate events</p>
+                    </div>
+                    <div class="package-includes">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>Pancit Canton</li>
+                            <li>Lumpiang Shanghai</li>
+                            <li>Adobong Manok</li>
+                            <li>Steamed Rice</li>
+                            <li>Mango Float</li>
+                            <li>Calamansi Juice</li>
+                        </ul>
+                    </div>
+                    <button class="package-order-btn" onclick="startOrder('A')">Select Package</button>
+                </div>
+
+                <!-- Package B -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>PACKAGE B</h3>
+                        <div class="package-price"> ₱8,999</div>
+                    </div>
+                    <div class="package-capacity">
+                        <strong>For 10-20 Persons</strong>
+                        <p>Ideal for medium-sized celebrations and corporate events</p>
+                    </div>
+                    <div class="package-includes">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>Fried Chicken</li>
+                            <li>Pancit Bilao</li>
+                            <li>Beef Steak</li>
+                            <li>Lumpia</li>
+                            <li>Lechon</li>
+                            <li>Coffee Jelly</li>
+                            <li>Mango Float</li>
+                            <li>2 Cases Softdrinks</li>
+                        </ul>
+                    </div>
+                    <button class="package-order-btn" onclick="startOrder('B')">Select Package</button>
+                </div>
+
+                <!-- Package C -->
+                <div class="package-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="package-header">
+                        <h3>PACKAGE C</h3>
+                        <div class="package-price"> ₱15,500</div>
+                    </div>
+                    <div class="package-capacity">
+                        <strong>For 20-30 Persons</strong>
+                        <p>Premium selection for large parties and special occasions</p>
+                    </div>
+                    <div class="package-includes">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>Fresh Lumpia</li>
+                            <li>Crispy Pata</li>
+                            <li>Kare-Kare</li>
+                            <li>Beef Steak</li>
+                            <li>Fried Chicken</li>
+                            <li>Pancit Bihon</li>
+                            <li>Steamed Rice</li>
+                            <li>Sago't Gulaman</li>
+                            <li>Mango Float</li>
+                            <li>Maja Blanca</li>
+                            <li>Coffee Jelly</li>
+                        </ul>
+                    </div>
+                    <button class="package-order-btn" onclick="startOrder('C')">Select Package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         INQUIRY / ORDER FORM MODAL
+         ============================================ -->
+    <div class="inquiry-modal" id="inquiryModal">
+        <div class="inquiry-modal-content">
+            <button class="modal-close" id="closeInquiryModal">&times;</button>
+
+            <div class="inquiry-header">
+                <h2>Place Your Order</h2>
+                <p>Select a package or build your own event menu. We'll contact you to finalize details.</p>
+            </div>
+
+            <form class="inquiry-form" id="inquiryForm">
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="Enter your phone number"
+                        required
+                    >
+                </div>
+
+                <!-- Package Selection -->
+                <div class="form-group">
+                    <label>Choose Package *</label>
+                    <div class="radio-row">
+                        <label><input type="radio" name="packageOption" value="A" data-price="2500" required> Package A (₱2,500)</label>
+                        <label><input type="radio" name="packageOption" value="B" data-price="4000"> Package B (₱4,000)</label>
+                        <label><input type="radio" name="packageOption" value="C" data-price="6000"> Package C (₱6,000)</label>
+                        <label><input type="radio" name="packageOption" value="events" data-price="0"> Events (Custom menu)</label>
+                    </div>
+                </div>
+
+                <!-- Event Type (only for Events package) -->
+                <div id="eventTypeSelection" class="form-group hidden">
+                    <label for="orderEventType">Event Type *</label>
+                    <select id="orderEventType" name="orderEventType">
+                        <option value="">Select event type</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="business">Business</option>
+                    </select>
+                </div>
+
+                <!-- Event Food Selection (for Events package) -->
+                <div id="foodSelection" class="form-group hidden">
+                    <label>Choose Food Items</label>
+                    <div id="foodOptionsContainer" class="food-options"></div>
+                </div>
+
+                <!-- Delivery / Pickup Option -->
+                <div class="form-group">
+                    <label>Delivery Option *</label>
+                    <div class="radio-row">
+                        <label><input type="radio" name="deliveryOption" value="pickup" required> Self Pickup</label>
+                        <label><input type="radio" name="deliveryOption" value="delivery"> Delivery</label>
+                    </div>
+                </div>
+
+                <!-- Pickup Fields -->
+                <div id="pickupFields" class="pickup-delivery-fields hidden">
+                    <div class="form-group">
+                        <label for="pickupDate">Pickup Date *</label>
+                        <input type="date" id="pickupDate" name="pickupDate">
+                    </div>
+                </div>
+
+                <!-- Delivery Fields -->
+                <div id="deliveryFields" class="pickup-delivery-fields hidden">
+                    <div class="form-group">
+                        <label for="deliveryAddress">Delivery Address *</label>
+                        <textarea id="deliveryAddress" name="deliveryAddress" rows="2" placeholder="Enter delivery address"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery Type *</label>
+                        <select id="deliveryType" name="deliveryType">
+                            <option value="standard" data-price="150">Standard Delivery (₱150)</option>
+                            <option value="premium" data-price="300">Premium Delivery (₱300)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Total Price -->
+                <div class="form-group order-total">
+                    <strong>Total:</strong> <span id="orderTotal">₱0</span>
+                </div>
+
+                <!-- Error Message -->
+                <div class="inquiry-error" id="inquiryError"></div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="inquiry-submit-btn">Order Now</button>
+            </form>
+
+            <div class="inquiry-footer">
+                <p>After ordering, you will be prompted to choose a payment method.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PAYMENT SELECTION MODAL
+         ============================================ -->
+    <div class="payment-modal hidden" id="paymentModal">
+        <div class="payment-modal-content">
+            <button class="modal-close" id="closePaymentModal">&times;</button>
+
+            <h2>Choose Payment Method</h2>
+            <p>Select a payment method to complete your order.</p>
+
+            <div class="payment-methods">
+                <button class="inquire-btn" onclick="selectPaymentMethod('Online Pay')">Online Pay</button>
+                <button class="inquire-btn" onclick="selectPaymentMethod('GCash')">GCash</button>
+                <button class="inquire-btn" onclick="selectPaymentMethod('PayMaya')">PayMaya</button>
+            </div>
+
+            <div id="paymentSummary" class="payment-summary hidden"></div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MENU PREVIEW MODAL
+         ============================================ -->
+    <div class="menu-modal" id="menuModal">
+        <div class="menu-modal-content">
+            <button class="modal-close" id="closeMenuModal">&times;</button>
+            
+            <h2>Our Complete Menu</h2>
+            
+            <div class="menu-categories">
+                <!-- Main Dishes -->
+                <div class="menu-category">
+                    <h3>🍽️ Main Dishes (Ulam)</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="assets/food/Chicken Adobo.jpg" alt="Chicken Adobo" class="menu-item-img">
+                            <span>Chicken Adobo</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Pork Adobo.jpg" alt="Pork Adobo" class="menu-item-img">
+                            <span>Pork Adobo</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Chicken Afritada.jpg" alt="Chicken Afritada" class="menu-item-img">
+                            <span>Chicken Afritada</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Pork Menudo.jpg" alt="Pork Menudo" class="menu-item-img">
+                            <span>Pork Menudo</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Beef Caldereta.jpg" alt="Beef Caldereta" class="menu-item-img">
+                            <span>Beef Caldereta</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Beef Steak.jpg" alt="Beef Steak" class="menu-item-img">
+                            <span>Beef Steak</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Chicken Curry.jpg" alt="Chicken Curry" class="menu-item-img">
+                            <span>Chicken Curry</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Bicol Express.jpg" alt="Bicol Express" class="menu-item-img">
+                            <span>Bicol Express</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Lechon Kawali.jpg" alt="Lechon Kawali" class="menu-item-img">
+                            <span>Lechon Kawali</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Pork BBQ.jpg" alt="Pork BBQ" class="menu-item-img">
+                            <span>Pork BBQ</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Sweat n Sour Fish.jpg" alt="Sweet and Sour Fish" class="menu-item-img">
+                            <span>Sweet and Sour Fish</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Noodles / Party Favorites -->
+                <div class="menu-category">
+                    <h3>🍜 Noodles / Party Favorites</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="assets/food/Pancit Canton.jpg" alt="Pancit Canton" class="menu-item-img">
+                            <span>Pancit Canton</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Pancit Bihon.jpg" alt="Pancit Bihon" class="menu-item-img">
+                            <span>Pancit Bihon</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Pancit Malabon.jpg" alt="Pancit Malabon" class="menu-item-img">
+                            <span>Pancit Malabon</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Spaghetti.jpg" alt="Spaghetti" class="menu-item-img">
+                            <span>Spaghetti</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Sotanghon Guisado.jpg" alt="Sotanghon Guisado" class="menu-item-img">
+                            <span>Sotanghon Guisado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Dishes -->
+                <div class="menu-category">
+                    <h3>🥗 Side Dishes</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="assets/food/Lumpiang Shanghai.jpg" alt="Lumpiang Shanghai" class="menu-item-img">
+                            <span>Lumpiang Shanghai</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Lumpiang Gulay.jpg" alt="Lumpiang Gulay" class="menu-item-img">
+                            <span>Lumpiang Gulay</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Chop Suey.jpg" alt="Chop Suey" class="menu-item-img">
+                            <span>Chop Suey</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Buttered Shrimp.jpg" alt="Buttered Shrimp" class="menu-item-img">
+                            <span>Buttered Shrimp</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Fried Chicken.jpg" alt="Fried Chicken" class="menu-item-img">
+                            <span>Fried Chicken</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filipino Desserts -->
+                <div class="menu-category">
+                    <h3>🍰 Filipino Desserts</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="assets/food/Leche Flan.jpg" alt="Leche Flan" class="menu-item-img">
+                            <span>Leche Flan</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Buko Pandan.jpg" alt="Buko Pandan" class="menu-item-img">
+                            <span>Buko Pandan</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Halo-Halo.jpg" alt="Halo-Halo" class="menu-item-img">
+                            <span>Halo-Halo</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Ube Halaya.jpg" alt="Ube Halaya" class="menu-item-img">
+                            <span>Ube Halaya</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Bibingka.jpg" alt="Bibingka" class="menu-item-img">
+                            <span>Bibingka</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Cassava Cake.jpg" alt="Cassava Cake" class="menu-item-img">
+                            <span>Cassava Cake</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Maja Blanca.jpg" alt="Maja Blanca" class="menu-item-img">
+                            <span>Maja Blanca</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Puto Cheese.jpg" alt="Puto Cheese" class="menu-item-img">
+                            <span>Puto Cheese</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-category">
+                    <h3>🍹 Drinks</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="assets/food/Calamansi Juice.jpg" alt="Calamansi Juice" class="menu-item-img">
+                            <span>Calamansi Juice</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Pineapple Juice.jpg" alt="Pineapple Juice" class="menu-item-img">
+                            <span>Pineapple Juice</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Iced Tea.jpg" alt="Iced Tea" class="menu-item-img">
+                            <span>Iced Tea</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/food/Sago't Gulaman.jpg" alt="Sago't Gulaman" class="menu-item-img">
+                            <span>Sago't Gulaman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-footer">
+                <p>For pricing and package combinations, please contact us or submit an inquiry!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         EVENTS MODAL
+         ============================================ -->
+    <div class="events-modal" id="eventsModal">
+        <div class="events-modal-content">
+            <button class="modal-close" id="closeEventsModal">&times;</button>
+            
+            <h2>Event Catering Services</h2>
+            <p class="events-intro">We specialize in catering for all types of celebrations. Select your event type to learn more.</p>
+            
+            <div class="event-types">
+                <!-- Birthday Events -->
+                <div class="event-type-card">
+                    <div class="event-type-icon">🎂</div>
+                    <h3>Birthday Celebrations</h3>
+                    <p class="event-type-desc">Make your birthday unforgettable with our vibrant and festive catering options.</p>
+                    <div class="event-type-features">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>✓ Custom menu selection</li>
+                            <li>✓ Themed food presentations</li>
+                            <li>✓ Decorative desserts & cakes</li>
+                            <li>✓ Beverage selections</li>
+                            <li>✓ Professional serving staff</li>
+                            <li>✓ Setup & cleanup</li>
+                        </ul>
+                    </div>
+                    <p class="event-type-size"><strong>Capacity:</strong> 10-300+ guests</p>
+                    <button class="inquire-btn" onclick="closeEventsModal(); openMenuModal();">View Menu</button>
+                </div>
+
+                <!-- Wedding Events -->
+                <div class="event-type-card featured-type">
+                    <div class="type-badge">Popular Choice</div>
+                    <div class="event-type-icon">💒</div>
+                    <h3>Wedding Receptions</h3>
+                    <p class="event-type-desc">Celebrate your special day with elegant catering that reflects your love story.</p>
+                    <div class="event-type-features">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>✓ Multi-course dinner options</li>
+                            <li>✓ Elegant table setups</li>
+                            <li>✓ Wedding cake & dessert bar</li>
+                            <li>✓ Full beverage service</li>
+                            <li>✓ Experienced catering team</li>
+                            <li>✓ Complete event coordination</li>
+                        </ul>
+                    </div>
+                    <p class="event-type-size"><strong>Capacity:</strong> 50-500+ guests</p>
+                    <button class="inquire-btn" onclick="closeEventsModal(); openMenuModal();">View Menu</button>
+                </div>
+
+                <!-- Business Events -->
+                <div class="event-type-card">
+                    <div class="event-type-icon">💼</div>
+                    <h3>Business Events</h3>
+                    <p class="event-type-desc">Professional catering for corporate functions that leave a lasting impression.</p>
+                    <div class="event-type-features">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>✓ Breakfast & coffee service</li>
+                            <li>✓ Buffet & plated options</li>
+                            <li>✓ Meeting refreshments</li>
+                            <li>✓ Networking reception platters</li>
+                            <li>✓ Quick & efficient service</li>
+                            <li>✓ Customizable menus</li>
+                        </ul>
+                    </div>
+                    <p class="event-type-size"><strong>Capacity:</strong> 20-500+ guests</p>
+                    <button class="inquire-btn" onclick="closeEventsModal(); openMenuModal();">View Menu</button>
+                </div>
+            </div>
+            
+            <div class="events-footer">
+                <p>Interested in one of these events? <button class="inquire-btn" onclick="closeEventsModal(); openInquiryModal();">Inquire Now</button></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SUPPORT MODAL
+         ============================================ -->
+    <div class="support-modal" id="supportModal">
+        <div class="support-modal-content">
+            <button class="modal-close" id="closeSupportModal">&times;</button>
+            
+            <h2>Customer Support</h2>
+            
+            <div class="support-sections">
+                <!-- Support Hours -->
+                <div class="support-section">
+                    <h3>⏰ Support Hours</h3>
+                    <div class="support-details">
+                        <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                        <p><strong>Saturday:</strong> 10:00 AM - 5:00 PM</p>
+                        <p><strong>Sunday:</strong> 11:00 AM - 4:00 PM</p>
+                        <p class="note">For urgent events, we provide 24/7 support!</p>
+                    </div>
+                </div>
+
+                <!-- Contact Methods -->
+                <div class="support-section">
+                    <h3>📞 Contact Methods</h3>
+                    <div class="contact-methods">
+                        <div class="method">
+                            <span class="method-icon">📧</span>
+                            <div>
+                                <p class="method-title">Email</p>
+                                <p>info@sisterscatering.com</p>
+                            </div>
+                        </div>
+                        <div class="method">
+                            <span class="method-icon">📱</span>
+                            <div>
+                                <p class="method-title">Phone</p>
+                                <p>(555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="method">
+                            <span class="method-icon">💬</span>
+                            <div>
+                                <p class="method-title">Live Chat</p>
+                                <p>Available on our website</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="support-section">
+                    <h3>❓ Frequently Asked Questions</h3>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <p class="faq-question">Can you accommodate dietary restrictions?</p>
+                            <p class="faq-answer">Yes! We offer halal, vegetarian, vegan, gluten-free, and allergy-friendly options.</p>
+                        </div>
+                        <div class="faq-item">
+                            <p class="faq-question">What is your cancellation policy?</p>
+                            <p class="faq-answer">Cancellations made 7+ days before the event receive a full refund. Less than 7 days: 50% refund.</p>
+                        </div>
+                        <div class="faq-item">
+                            <p class="faq-question">Do you provide serving staff?</p>
+                            <p class="faq-answer">Yes! Professional serving staff is included in all packages above  ₱5,000.</p>
+                        </div>
+                        <div class="faq-item">
+                            <p class="faq-question">How far do you deliver?</p>
+                            <p class="faq-answer">We deliver within 25 miles. Events beyond 25 miles available with additional fee.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         DELIVERY & SETUP MODAL
+         ============================================ -->
+    <div class="delivery-modal" id="deliveryModal">
+        <div class="delivery-modal-content">
+            <button class="modal-close" id="closeDeliveryModal">&times;</button>
+            
+            <h2>Delivery & Setup Services</h2>
+            
+            <div class="delivery-sections">
+                <!-- Delivery Options -->
+                <div class="delivery-section">
+                    <h3>🚗 Delivery Options</h3>
+                    <div class="delivery-options">
+                        <div class="option-card">
+                            <p class="option-title">Standard Delivery</p>
+                            <p class="option-price">150 pesos</p>
+                            <ul>
+                                <li>✓ Delivery within 25 miles</li>
+                                <li>✓ Basic setup</li>
+                                <li>✓ Food inspection</li>
+                                <li>✓ Serving utensils</li>
+                            </ul>
+                        </div>
+                        <div class="option-card">
+                            <p class="option-title">Premium Setup</p>
+                            <p class="option-price">300 pesos</p>
+                            <ul>
+                                <li>✓ Extended Delivery (25-50 miles)</li>
+                                <li>✓ Full table setup</li>
+                                <li>✓ Decorative arrangements</li>
+                                <li>✓ 2 hours setup service</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Coverage -->
+                <div class="delivery-section">
+                    <h3>📍 Service Coverage</h3>
+                    <div class="coverage-details">
+                        <p><strong>Standard Area:</strong> Within 25 miles - Included in delivery fee</p>
+                        <p><strong>Extended Area:</strong> 25-50 miles - Additional 120pesos per mile</p>
+                        <p><strong>Special Events:</strong> 50+ miles - Contact us for quote</p>
+                        <p class="note">We serve the entire metro area and surrounding cities!</p>
+                    </div>
+                </div>
+
+                <!-- Setup Services -->
+                <div class="delivery-section">
+                    <h3>🎪 Setup Services</h3>
+                    <div class="setup-services">
+                        <div class="service-item">
+                            <span class="service-icon">📦</span>
+                            <div>
+                                <p class="service-name">Unloading & Arrangement</p>
+                                <p>Professional unloading and food arrangement on venue tables</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">🍽️</span>
+                            <div>
+                                <p class="service-name">Table Settings</p>
+                                <p>Plates, utensils, napkins, and serving setup</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">❄️</span>
+                            <div>
+                                <p class="service-name">Temperature Control</p>
+                                <p>Hot food warmers and cold beverage stations provided</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-icon">🧹</span>
+                            <div>
+                                <p class="service-name">Cleanup</p>
+                                <p>Post-event cleanup and container removal included</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timing -->
+                <div class="delivery-section">
+                    <h3>⏱️ Delivery Timing</h3>
+                    <div class="timing-details">
+                        <p><strong>Standard:</strong> Delivered 30 minutes before event start time</p>
+                        <p><strong>Early Setup:</strong> Delivery 1-2 hours before (for full setup)</p>
+                        <p><strong>Late Pickup:</strong> Next day pickup available for 200pesos (+1,500pesos per additional day)</p>
+                        <p class="note">All timing is arranged directly with your event coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         ADMIN PANEL (HIDDEN BY DEFAULT)
+         ============================================ -->
+    <section id="adminPanel" class="admin-panel hidden">
+        <div class="admin-container">
+            <div class="admin-header">
+                <h2>Admin Panel</h2>
+                <button class="admin-logout-btn" onclick="closeAdminPanel()">Back to Site</button>
+            </div>
+
+            <!-- Admin Login -->
+            <div id="adminLoginView" class="admin-view">
+                <div class="admin-login-card">
+                    <h3>Admin Login</h3>
+                    <p>Use your admin credentials to access the dashboard.</p>
+                    <div class="admin-form-group">
+                        <label for="adminUsername">Username</label>
+                        <input type="text" id="adminUsername" placeholder="admin">
+                    </div>
+                    <div class="admin-form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" placeholder="password">
+                    </div>
+                    <div class="admin-error" id="adminError"></div>
+                    <button class="admin-login-btn" onclick="adminLogin()">Login</button>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div id="adminDashboardView" class="admin-view hidden">
+                <aside class="admin-sidebar">
+                    <nav class="admin-nav">
+                        <a href="#" class="admin-nav-link active" data-page="dashboard" onclick="showAdminPage('dashboard')">Dashboard</a>
+                        <a href="#" class="admin-nav-link" data-page="events" onclick="showAdminPage('events')">Events</a>
+                        <a href="#" class="admin-nav-link" data-page="menu" onclick="showAdminPage('menu')">Menu</a>
+                        <a href="#" class="admin-nav-link" data-page="orders" onclick="showAdminPage('orders')">Orders Report</a>
+                        <a href="#" class="admin-nav-link" data-page="sales" onclick="showAdminPage('sales')">Sales Report</a>
+                    </nav>
+                </aside>
+
+                <main class="admin-main">
+                    <div id="adminDashboardPage" class="admin-page">
+                        <h3>Dashboard Overview</h3>
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <h4>Total Events</h4>
+                                <p id="dashboardTotalEvents">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Total Menu Items</h4>
+                                <p id="dashboardTotalFoods">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Total Orders</h4>
+                                <p id="dashboardTotalOrders">0</p>
+                            </div>
+                            <div class="dashboard-card">
+                                <h4>Total Revenue</h4>
+                                <p id="dashboardTotalRevenue">₱0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="adminEventsPage" class="admin-page hidden">
+                        <div class="admin-page-header">
+                            <h3>Events</h3>
+                            <button class="admin-action-btn" onclick="adminAddEvent()">Add Event</button>
+                        </div>
+                        <div class="admin-table" id="eventsTableContainer"></div>
+                    </div>
+
+                    <div id="adminMenuPage" class="admin-page hidden">
+                        <div class="admin-page-header">
+                            <h3>Menu</h3>
+                            <button class="admin-action-btn" onclick="openAddFoodForm()">Add Food</button>
+                        </div>
+                        <div class="admin-table" id="menuTableContainer"></div>
+                        <div id="addFoodForm" class="admin-form hidden">
+                            <h4>Add New Food Item</h4>
+                            <div class="admin-form-group">
+                                <label for="foodName">Food Name</label>
+                                <input type="text" id="foodName" placeholder="Adobo">
+                            </div>
+                            <div class="admin-form-group">
+                                <label for="foodPrice">Price</label>
+                                <input type="number" id="foodPrice" placeholder="400">
+                            </div>
+                            <div class="admin-form-group">
+                                <label for="foodCategory">Category</label>
+                                <input type="text" id="foodCategory" placeholder="Main Dish">
+                            </div>
+                            <div class="admin-form-group">
+                                <label for="foodImage">Image URL</label>
+                                <input type="text" id="foodImage" placeholder="assets/food/adobo.jpg">
+                            </div>
+                            <div class="admin-form-actions">
+                                <button class="admin-action-btn" onclick="saveNewFood()">Save Food</button>
+                                <button class="admin-secondary-btn" onclick="closeAddFoodForm()">Cancel</button>
+                            </div>
+                            <div class="admin-error" id="foodError"></div>
+                        </div>
+                    </div>
+
+                    <div id="adminOrdersPage" class="admin-page hidden">
+                        <div class="admin-page-header">
+                            <h3>Order Report</h3>
+                        </div>
+                        <div class="admin-table" id="ordersTableContainer"></div>
+                    </div>
+
+                    <div id="adminSalesPage" class="admin-page hidden">
+                        <div class="admin-page-header">
+                            <h3>Sales Report</h3>
+                        </div>
+                        <div class="admin-sales">
+                            <div class="sales-card">
+                                <h4>Total Revenue</h4>
+                                <p id="salesTotalRevenue">₱0</p>
+                            </div>
+                            <div class="sales-card">
+                                <h4>Number of Orders</h4>
+                                <p id="salesTotalOrders">0</p>
+                            </div>
+                            <div class="sales-card">
+                                <h4>Average Order Value</h4>
+                                <p id="salesAverageOrder">₱0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sister's Catering. All rights reserved. | Bringing Filipino food to every celebration.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
